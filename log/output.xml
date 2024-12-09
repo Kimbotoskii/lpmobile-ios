@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.13.0 on darwin)" generated="2024-12-09T10:12:14.353946" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Logout" source="/Users/tester_cps/PycharmProjects/Liveproduction/Tests/login_logout.robot">
+<test id="s1-t1" name="Login and Logout" line="8">
+<kw name="Given Open App" owner="startApp">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${APPIUM_SERVER}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>appium:deviceName=${DEVICE_NAME}</arg>
+<arg>appium:platformVersion=${PLATFORM_VERSION}</arg>
+<arg>appium:udid=${UDID}</arg>
+<arg>appium:bundleId=${BUNDLE_ID}</arg>
+<arg>appium:automationName=${AUTOMATION_NAME}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-12-09T10:12:14.460107" elapsed="3.018949"/>
+</kw>
+<doc>Open The Application</doc>
+<status status="PASS" start="2024-12-09T10:12:14.459730" elapsed="3.019778"/>
+</kw>
+<kw name="When User Able to Login" owner="LoginPage">
+<kw name="User can view Welcome Page" owner="LoginPage">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-12-09T10:12:18.660746" level="INFO">xpath criteria: (//XCUIElementTypeOther[@name="Sign in"])[3]
+xpath criteria: (//XCUIElementTypeOther[@name="Sign in"])[3]
+xpath criteria: (//XCUIElementTypeOther[@name="Sign in"])[3]</msg>
+<arg>${Sign_in_button}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-12-09T10:12:17.481596" elapsed="1.181319"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-12-09T10:12:18.665294" level="INFO">Clicking element 'xpath=(//XCUIElementTypeOther[@name="Sign in"])[3]'.</msg>
+<msg time="2024-12-09T10:12:19.345168" level="INFO">xpath criteria: (//XCUIElementTypeOther[@name="Sign in"])[3]</msg>
+<arg>${Sign_in_button}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-12-09T10:12:18.663232" elapsed="0.682588"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-09T10:12:22.347832" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-09T10:12:19.346304" elapsed="3.002362"/>
+</kw>
+<kw name="Tap With Positions" owner="AppiumLibrary">
+<arg>253</arg>
+<arg>498</arg>
+<doc>Taps on a particular place with up to five fingers, holding for a
+certain time</doc>
+<status status="PASS" start="2024-12-09T10:12:22.349466" elapsed="0.809174"/>
+</kw>
+<status status="PASS" start="2024-12-09T10:12:17.481064" elapsed="5.678026"/>
+</kw>
+<kw name="User can Enter Username" owner="LoginPage">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-12-09T10:12:26.730684" level="INFO">xpath criteria: //XCUIElementTypeTextField[@name="username"]
+xpath criteria: //XCUIElementTypeTextField[@name="username"]
+xpath criteria: //XCUIElementTypeTextField[@name="username"]
+xpath criteria: //XCUIElementTypeTextField[@name="username"]</msg>
+<arg>${username_field}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-12-09T10:12:23.160388" elapsed="3.570510"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-12-09T10:12:26.732742" level="INFO">Clicking element 'xpath=//XCUIElementTypeTextField[@name="username"]'.</msg>
+<msg time="2024-12-09T10:12:28.141749" level="INFO">xpath criteria: //XCUIElementTypeTextField[@name="username"]</msg>
+<arg>${username_field}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-12-09T10:12:26.731112" elapsed="1.410877"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-12-09T10:12:28.144835" level="INFO">Typing text 'SWQA_Automation_STG' into text field 'xpath=//XCUIElementTypeTextField[@name="username"]'</msg>
+<msg time="2024-12-09T10:12:30.041580" level="INFO">xpath criteria: //XCUIElementTypeTextField[@name="username"]</msg>
+<arg>${username_field}</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-12-09T10:12:28.142245" elapsed="1.899730"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-12-09T10:12:30.045897" level="INFO">Clicking element 'xpath=//XCUIElementTypeButton[@name="Use password"]'.</msg>
+<msg time="2024-12-09T10:12:31.553125" level="INFO">xpath criteria: //XCUIElementTypeButton[@name="Use password"]</msg>
+<arg>${use_password_button}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-12-09T10:12:30.042404" elapsed="1.511073"/>
+</kw>
+<status status="PASS" start="2024-12-09T10:12:23.159599" elapsed="8.394059"/>
+</kw>
+<kw name="User can Enter Password" owner="LoginPage">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-12-09T10:12:32.809043" level="INFO">xpath criteria: //XCUIElementTypeSecureTextField[@name="password"]</msg>
+<arg>${password_field}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-12-09T10:12:31.554997" elapsed="1.254286"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-12-09T10:12:32.811617" level="INFO">Clicking element 'xpath=//XCUIElementTypeSecureTextField[@name="password"]'.</msg>
+<msg time="2024-12-09T10:12:34.233615" level="INFO">xpath criteria: //XCUIElementTypeSecureTextField[@name="password"]</msg>
+<arg>${password_field}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-12-09T10:12:32.809541" elapsed="1.424221"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-12-09T10:12:34.235160" level="INFO">Typing text 'admin123{' into text field 'xpath=//XCUIElementTypeSecureTextField[@name="password"]'</msg>
+<msg time="2024-12-09T10:12:35.723394" level="INFO">xpath criteria: //XCUIElementTypeSecureTextField[@name="password"]</msg>
+<arg>${password_field}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-12-09T10:12:34.233920" elapsed="1.489752"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-12-09T10:12:35.726468" level="INFO">Clicking element 'xpath=//XCUIElementTypeButton[@name="submit-button"]'.</msg>
+<msg time="2024-12-09T10:12:37.222341" level="INFO">xpath criteria: //XCUIElementTypeButton[@name="submit-button"]</msg>
+<arg>${submit_button}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-12-09T10:12:35.723979" elapsed="1.498817"/>
+</kw>
+<status status="PASS" start="2024-12-09T10:12:31.554407" elapsed="5.668619"/>
+</kw>
+<kw name="User Navigate to HomePage" owner="LoginPage">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-12-09T10:12:46.522250" level="INFO">xpath criteria: //XCUIElementTypeOther[@name="drawer-button"]
+xpath criteria: //XCUIElementTypeOther[@name="drawer-button"]
+xpath criteria: //XCUIElementTypeOther[@name="drawer-button"]
+xpath criteria: //XCUIElementTypeOther[@name="drawer-button"]
+xpath criteria: //XCUIElementTypeOther[@name="drawer-button"]
+xpath criteria: //XCUIElementTypeOther[@name="drawer-button"]
+xpath criteria: //XCUIElementTypeOther[@name="drawer-button"]
+xpath criteria: //XCUIElementTypeOther[@name="drawer-button"]</msg>
+<arg>${drawer_button}</arg>
+<arg>30s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-12-09T10:12:37.223968" elapsed="9.298765"/>
+</kw>
+<status status="PASS" start="2024-12-09T10:12:37.223403" elapsed="9.299613"/>
+</kw>
+<status status="PASS" start="2024-12-09T10:12:17.479966" elapsed="29.043177"/>
+</kw>
+<kw name="Then User Able to Sign Out" owner="SignoutPage">
+<kw name="User Navigate to HomePage" owner="LoginPage">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-12-09T10:12:47.685704" level="INFO">xpath criteria: //XCUIElementTypeOther[@name="drawer-button"]</msg>
+<arg>${drawer_button}</arg>
+<arg>30s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-12-09T10:12:46.525580" elapsed="1.160431"/>
+</kw>
+<status status="PASS" start="2024-12-09T10:12:46.525088" elapsed="1.161107"/>
+</kw>
+<kw name="User can validate Username" owner="SignoutPage">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-12-09T10:12:47.688791" level="INFO">Clicking element 'xpath=//XCUIElementTypeOther[@name="drawer-button"]'.</msg>
+<msg time="2024-12-09T10:12:49.831842" level="INFO">xpath criteria: //XCUIElementTypeOther[@name="drawer-button"]</msg>
+<arg>${drawer_button}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-12-09T10:12:47.686937" elapsed="2.145229"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-12-09T10:12:49.835101" level="INFO">Clicking element 'xpath=(//XCUIElementTypeOther[@name="My account"])[2]'.</msg>
+<msg time="2024-12-09T10:12:50.826426" level="INFO">xpath criteria: (//XCUIElementTypeOther[@name="My account"])[2]</msg>
+<arg>${My_Account_Tab}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-12-09T10:12:49.832477" elapsed="0.994466"/>
+</kw>
+<status status="PASS" start="2024-12-09T10:12:47.686499" elapsed="3.140730"/>
+</kw>
+<kw name="User can view Username Account" owner="SignoutPage">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-12-09T10:12:51.812059" level="INFO">xpath criteria: //XCUIElementTypeStaticText[@name="SWQA Automation STG"]</msg>
+<arg>//XCUIElementTypeStaticText[@name="SWQA Automation STG"]</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-12-09T10:12:50.828470" elapsed="0.984076"/>
+</kw>
+<status status="PASS" start="2024-12-09T10:12:50.827734" elapsed="0.985153"/>
+</kw>
+<kw name="User Click Sign Out" owner="SignoutPage">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-12-09T10:12:51.816881" level="INFO">Clicking element 'xpath=(//XCUIElementTypeOther[@name="Sign out"])[2]'.</msg>
+<msg time="2024-12-09T10:12:53.322075" level="INFO">xpath criteria: (//XCUIElementTypeOther[@name="Sign out"])[2]</msg>
+<arg>${Sign_Out_button}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-12-09T10:12:51.814151" elapsed="1.508053"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-12-09T10:12:54.293032" level="INFO">xpath criteria: (//XCUIElementTypeOther[@name="Sign out"])[4]</msg>
+<arg>${Confirm_Sign_Out_button}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-12-09T10:12:53.322360" elapsed="0.971157"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-12-09T10:12:54.297927" level="INFO">Clicking element 'xpath=(//XCUIElementTypeOther[@name="Sign out"])[4]'.</msg>
+<msg time="2024-12-09T10:12:55.691259" level="INFO">xpath criteria: (//XCUIElementTypeOther[@name="Sign out"])[4]</msg>
+<arg>${Confirm_Sign_Out_button}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-12-09T10:12:54.293977" elapsed="1.397521"/>
+</kw>
+<status status="PASS" start="2024-12-09T10:12:51.813433" elapsed="3.878235"/>
+</kw>
+<status status="PASS" start="2024-12-09T10:12:46.523866" elapsed="9.167916"/>
+</kw>
+<doc>this is to test login</doc>
+<status status="PASS" start="2024-12-09T10:12:14.459313" elapsed="41.232688"/>
+</test>
+<status status="PASS" start="2024-12-09T10:12:14.357935" elapsed="41.334975"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login Logout">Login Logout</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
