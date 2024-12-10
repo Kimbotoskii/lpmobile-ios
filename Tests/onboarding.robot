@@ -12,5 +12,10 @@ Onboarding
     [Documentation]     This test will verify the user organisation after login
     Given Open App
     And User can view Welcome Page
-    when User Choose Organization
+    when User onboard Organization
     Then User skip guide
+    When User go to organization
+
+
+
+

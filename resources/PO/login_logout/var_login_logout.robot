@@ -12,6 +12,11 @@ ${Confirm_Sign_Out_button}        xpath=(//XCUIElementTypeOther[@name="Sign out"
 ${nextButton}                     xpath=(//XCUIElementTypeOther[@name="Next"])[3]
 ${skipButton}                     xpath=//XCUIElementTypeOther[@name="Skip"]
 
+#org
+${swqa_org}        //XCUIElementTypeOther[@name="SWQA PrintOS Automation - PSP"]
+${gaia_org}        //XCUIElementTypeOther[@name="HP Inc. Gaia Testing"]
+${drawer_box}      xpath=(//XCUIElementTypeOther[@name="Bottom Sheet"])[2]
+
 #Backup
 #${AutomationPSPOrg}     //android.view.ViewGroup[@content-desc="PSP, SWQA PrintOS Automation - PSP"]
 #${Reseller1Org}         //android.view.ViewGroup[@content-desc="PSP, EOS PPU SWQA - Reseller 1"]
