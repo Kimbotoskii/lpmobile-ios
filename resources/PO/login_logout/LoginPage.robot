@@ -5,8 +5,8 @@ Resource    var_login_logout.robot
 
 *** Keywords ***
 User can view Privacy Notice
-     Wait Until Element Is Visible       xpath=(//XCUIElementTypeOther[@name="Continue"])[2]    30s
-     Click Element          xpath= (//XCUIElementTypeOther[@name="Continue"])[2]
+     Wait Until Element Is Visible       ${continue_button}  30s
+     Click Element          ${continue_button}
 
 User view Welcome Page
      Wait Until Element Is Visible    ${Sign_in_button}    30s
@@ -14,8 +14,6 @@ User view Welcome Page
 User click Welcome Page
     Wait Until Element Is Visible    ${Sign_in_button}    30s
     Click Element                    ${Sign_in_button}
-#    Sleep    3s
-#    Tap With Positions    253    498
 
 User can Enter Username
     Wait Until Element Is Visible    ${username_field}    30s

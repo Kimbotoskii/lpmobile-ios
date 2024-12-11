@@ -19,5 +19,6 @@ ${AUTOMATION_NAME}      XCUITest
 ${APPIUM_SERVER}        http://127.0.0.1:4723
 ${USERNAME}             SWQA_Automation_STG
 ${PASSWORD}             admin123{
+${AUTOACCEPT}           true
 
 
