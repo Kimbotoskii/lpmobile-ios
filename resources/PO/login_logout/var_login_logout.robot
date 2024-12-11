@@ -1,5 +1,6 @@
 *** Variables ***
 #Before Login
+${continue_button}               xpath=(//XCUIElementTypeOther[@name="Continue"])[2]
 ${Sign_in_button}                xpath=(//XCUIElementTypeOther[@name="Sign in"])[3]
 ${username_field}                xpath=//XCUIElementTypeTextField[@name="username"]
 ${use_password_button}           xpath=//XCUIElementTypeButton[@name="Use password"]
@@ -14,6 +15,7 @@ ${skipButton}                     xpath=//XCUIElementTypeOther[@name="Skip"]
 ${swqa_org}        //XCUIElementTypeOther[@name="SWQA PrintOS Automation - PSP"]
 ${gaia_org}        //XCUIElementTypeOther[@name="HP Inc. Gaia Testing"]
 ${drawer_box}      xpath=(//XCUIElementTypeOther[@name="Bottom Sheet"])[2]
+
 
 #Backup
 #${AutomationPSPOrg}     //android.view.ViewGroup[@content-desc="PSP, SWQA PrintOS Automation - PSP"]
